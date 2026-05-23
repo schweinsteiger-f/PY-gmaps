@@ -1,0 +1,97 @@
+===================================================================
+COLA DE COMANDOS: PLAYSOUND, COLORAMA, PYWEBVIEW, WEBBROWSER, OS, TIME E AST
+===================================================================
+
+1) PLAYSOUND (Reproduzir Áudio Local)
+-------------------------------------------------------------------
+from sons_local import playsound
+
+# Executa o arquivo de áudio (chama direto a função importada):
+playsound("som.mp3")
+
+
+2) COLORAMA (Textos Coloridos no Terminal)
+-------------------------------------------------------------------
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
+
+# Cores de Texto (Fore) e Fundos (Back):
+print(Fore.GREEN + "Texto Verde" + Style.RESET_ALL)
+print(Fore.RED + Back.YELLOW + "Texto Vermelho com Fundo Amarelo" + Style.RESET_ALL)
+print(Style.BRIGHT + "Texto em Negrito/Brilhante" + Style.RESET_ALL)
+
+
+3) PYWEBVIEW (Interface Gráfica / Janela com HTML/CSS)
+-------------------------------------------------------------------
+import webview
+
+# Criar e abrir uma janela própria do app carregando um site ou HTML local:
+webview.create_window('Título da Janela', 'https://google.com', width=800, height=600)
+webview.start()
+
+
+4) WEBBROWSER (Abrir Links no Navegador Padrão do PC)
+-------------------------------------------------------------------
+import webbrowser
+
+# Abre uma nova aba no Chrome/Firefox padrão do sistema:
+webbrowser.open("https://github.com")
+
+
+5) OS (Interagir com o Sistema Operacional e Terminal)
+-------------------------------------------------------------------
+import os
+
+# Função para limpar o terminal de forma independente do sistema
+def limpar_tela():
+    # 'nt' é o nome que o os.name retorna para sistemas Windows
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
+# Exemplo de uso:
+limpar_tela()
+print("O terminal foi limpo!")
+
+
+# Verificar se um arquivo existe antes de tentar abrir ou tocar:
+if os.path.exists("som.mp3"):
+    print("Arquivo encontrado!")
+
+
+6) TIME (Controle de Tempo e Pausas)
+-------------------------------------------------------------------
+import time
+
+# Fazer o script esperar/pausar por alguns segundos (ex: esperar 3 segundos):
+print("Carregando...")
+time.sleep(3)
+print("Pronto!")
+
+
+7) AST (Processar Textos e Estruturas de Código com Segurança)
+-------------------------------------------------------------------
+import ast
+
+# Converter com segurança uma string formatada em uma lista ou dicionário real do Python:
+string_lista = "[1, 2, 3, 4]"
+lista_real = ast.literal_eval(string_lista)
+print(lista_real)  # Agora o Python trata como uma lista de verdade!
+
+
+===================================================================
+BLOCO DE IMPORTS PADRÃO (Copie e cole no topo dos seus arquivos)
+===================================================================
+import ast
+import webview
+import os
+import time
+import webbrowser
+import colorama
+from colorama import Fore, Back, Style
+from sons_local import playsound
+
+# Inicializadores obrigatórios:
+colorama.init()

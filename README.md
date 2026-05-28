@@ -1,6 +1,6 @@
 # Calculadora **_Python_** 🐍
 
-## E simplesmente um google maps feito em pyton nada de especial🫠
+## E simplesmente um "google maps" feito em pyton nada de especial🫠
 
 <details>
 <summary>✨Bibliotecas utilizadas✨</summary>

@@ -6,7 +6,7 @@ import colorama
 from colorama import Fore, Back, Style
 import time
 colorama.init()
-print(Fore.LIGHTCYAN_EX + "Bem-vindo ao Gmaps em python!")
+print(Fore.LIGHTCYAN_EX + "Bem-vindo ao Gmaps em python! Repositorio do projeto: https://github.com/schweinsteiger-f/PY-Gmaps")
 print("Iniciando....")
 time.sleep(2)
 localidade_codificada = urllib.parse.quote_plus(input("Digite aqui a localidade que você gostaria de pesquisar: "))
